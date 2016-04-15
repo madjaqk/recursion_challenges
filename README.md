@@ -1,35 +1,41 @@
 #Recursive algorithms:
 
-Here are some recursive algorithm challenges culled from Wikipedia, HackerRank, Project Euler, and elsewhere.
+Here are some recursive algorithm challenges culled from Wikipedia, Project Euler, and elsewhere.
 
 If your code is inefficient, consider looking into [memoization](https://en.wikipedia.org/wiki/Memoization) and [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming).
 
 ##Greatest Common Divisor:
 
 Implement Euclid's algorithm to find the greatest common denominator of two positive integers.  
-	`gcd(a,a) = a`
-	`gcd(a,b) = gcd(a-b,b)` if a > b
-	`gcd(a,b) = gcd(a, b-1)` if b > a
+```
+gcd(a,a) = a
+gcd(a,b) = gcd(a-b,b) 	if a > b
+gcd(a,b) = gcd(a, b-a) 	if b > a
+```	
 	
 Now find `gcd(1529, 14038)`, `gcd(1529, 14039)`, and `gcd(123456, 987654)`
 
 ##Ackermann Function
 
 The Ackermann function has an important place in the history of computer theory; it was the first example of a computable function that is not primitive recursive.  (I *think* that means that it can't be calculated with just for-loops, as those run for a set number of steps, as opposed to the potentially-unbound while-loop.  You can try to get more details from the [Wikipedia page](https://en.wikipedia.org/wiki/Primitive_recursive_function).)  Here's the definition:
-	`A(x,y) = y + 1` if x = 0
-	`A(x,y) = A(x-1,1)` if y = 0 
-	`A(x,y) = A(x-1,A(x,y-1))` otherwise
+```
+A(x,y) = y + 1 				if x = 0
+A(x,y) = A(x-1,1) 			if y = 0 
+A(x,y) = A(x-1,A(x,y-1))	otherwise
+```
 
 Calculate `A(3,2)` and `A(3,6)`.  If you're feeling bold, try `A(6,3)`.
 
 ##Zibonacci
 
 Consider the function z(n):
-	`z(0) = 1`
-	`z(1) = 1`
-	`z(2) = 2`
-	`z(2*n) = z(n+1) + z(n) + 1` if n >= 2
-	`z(2*n + 1) = z(n-1) + z(n) + 1` if n >= 1
+```
+z(0) = 1
+z(1) = 1
+z(2) = 2
+z(2*n) = z(n+1) + z(n) + 1 		if n >= 2
+z(2*n + 1) = z(n-1) + z(n) + 1	if n >= 1
+```
 
 What is `z(10)`?  `z(100)`?
 
@@ -38,8 +44,10 @@ What is `z(10)`?  `z(100)`?
 ##Tak Function
 
 The tak function is used to benchmark how well platforms handle recursion.  Unlike some other functions here, the numbers don't get particularly large, but there are very many function calls.
-	`tak(x,y,z) = y` if x <= y
-	`tak(x,y,z) = tak(tak(x-1, y, z), tak(y-1,z,x), tak(z-1,x,y))` otherwise
+```
+tak(x,y,z) = y													if x <= y
+tak(x,y,z) = tak(tak(x-1, y, z), tak(y-1,z,x), tak(z-1,x,y))	otherwise
+```
 
 Find `tak(6,3,5)` and `tak(10,2,9)`.  In both cases, how many times is tak called?
 
