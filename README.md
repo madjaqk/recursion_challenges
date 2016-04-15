@@ -1,6 +1,6 @@
 #Recursive algorithms:
 
-Here are some recursive algorithm challenges culled from Wikipedia, HackerRank, Project Euler, and elsewhere.
+Here are some recursive algorithm challenges culled from Wikipedia, Project Euler, and elsewhere.
 
 If your code is inefficient, consider looking into [memoization](https://en.wikipedia.org/wiki/Memoization) and [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming).
 
