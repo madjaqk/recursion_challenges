@@ -63,7 +63,24 @@ What starting number under 10,000 has the most terms before reaching 1 for the f
 
 ##Change-making
 
-Assuming you can only use quarters, dimes, nickels, and pennies, return every way to make 37 cents, and every way to make a dollar.
+Assuming you can only use quarters, dimes, nickels, and pennies, return every way to make 37 cents, and every way to make a dollar.  Now solve again if the coins are worth 75, 19, 11, 5, and 3 cents.
+
+##The Knapsack Problem
+
+You're taking your colored ball collection to the market to sell, but you can only carry W kilograms in your knapsack.  Suppose your balls have the following values and weights:
+
+| Color | Value | Weight |
+| ----- | ----- | ------ |
+| Grey | $2 | 1kg |
+| Orange | $1 | 1kg |
+| Blue | $2 | 2kg |
+| Yellow | $10 | 4kg |
+| Green | $4 | 12kg |
+| Red | $50 | 20kg |
+| Purple | $25 | 15kg |
+| Black | $30 | 35kg |
+
+If W = 15, and you can only bring at most one copy of each ball, which should you choose?  What about if W = 50?  What if you can bring any number of copies of each ball?
 
 ##Balanced Parentheses
 
@@ -77,7 +94,7 @@ Some background on graph theory: A graph has some number of nodes.  Some or all 
 
 ![weighted graph](http://web.cs.wpi.edu/~mebalazs/cs507/slides06/slides-4.gif)
 
-The picture makes it easy to see the structure of the graph, but it's not very machine readable.  A more useful format is an adjaceny matrix, a 2d array showing the distance between each pair of connected nodes.  For our purposes, I'm going to write it as a dictionary of dictionaries:
+The picture makes it easy to see the structure of the graph, but it's not very machine readable.  A more useful format is an adjaceny matrix, a 2D array showing the distance between each pair of connected nodes.  For our purposes, I'm going to write it as a dictionary of dictionaries:
 
 ```
 {
