@@ -32,7 +32,7 @@ Consider the function z(n):
 z(0) = 1
 z(1) = 1
 z(2) = 2
-z(2*n) = z(n+1) + z(n) + 1 		if n >= 2
+z(2*n) = z(n+1) + z(n) + n 		if n >= 2
 z(2*n + 1) = z(n-1) + z(n) + 1	if n >= 1
 ```
 
