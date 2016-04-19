@@ -36,7 +36,7 @@ z(2*n) = z(n+1) + z(n) + n 		if n >= 2
 z(2*n + 1) = z(n-1) + z(n) + 1	if n >= 1
 ```
 
-What is `z(10)`?  `z(100)`?
+What is `z(10)`?  `z(100)`?  `z(1000)`?
 
 [I was given a harder version as part of Google Foobar: For a given X, find the largest n such that z(n) = X.  I don't think a recursive solution is the best fit for this, but then again, I never found any good answer.]
 
