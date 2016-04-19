@@ -8,9 +8,8 @@ If your code is inefficient, consider looking into [memoization](https://en.wiki
 
 Implement Euclid's algorithm to find the greatest common denominator of two positive integers.  
 ```
-gcd(a,a) = a
-gcd(a,b) = gcd(a-b,b) 	if a > b
-gcd(a,b) = gcd(a, b-a) 	if b > a
+gcd(a,0) = a
+gcd(a,b) = gcd(b, a mod b) 	if b > 0
 ```	
 	
 Now find `gcd(1529, 14038)`, `gcd(1529, 14039)`, and `gcd(123456, 987654)`
