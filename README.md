@@ -4,6 +4,11 @@ Here are some recursive algorithm challenges culled from Wikipedia, Project Eule
 
 If your code is inefficient, consider looking into [memoization](https://en.wikipedia.org/wiki/Memoization) and [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming).
 
+##Flatten
+
+Given an array of arrays (that could themselves include arrays, and so on, and so forth), return an array of the values (maintaining order).  Alternately, for every element that is an array, extract its elements into the new array.  For example,
+`flatten([[1,2,3],4,[5,[6,7],8],[9,[10]]])` should return `[1,2,3,4,5,6,7,8,9,10]`.
+
 ##Greatest Common Divisor:
 
 Implement Euclid's algorithm to find the greatest common denominator of two positive integers.  
@@ -53,8 +58,10 @@ Find `tak(6,3,5)` and `tak(10,2,9)`.  In both cases, how many times is tak calle
 ##Collatz
 
 Consider the function f(n):
-	`f(n) = n/2` if n is even
-	`f(n) = 3*n + 1` if n is odd
+```
+f(n) = n/2 if n is even
+f(n) = 3*n + 1 if n is odd
+```
 
 Start with any positive integer, then take `f(n)`, `f(f(n))`, `f(f(f(n)))`, and so forth.  The Collatz conjecture states that this sequence will eventually reach the cycle 4, 2, 1, 4, 2, 1... regardless of the starting n.
 
